@@ -32,29 +32,39 @@ Kinetru Interface
 
 ---
 
-## Core Responsibilities
+## Runtime Flow
 
-### Ingestion
-Receives structured outputs from orchestration and upstream systems.
-
-### Processing
-Normalizes and formats intelligence into consistent structures.
-
-### Structuring
-Transforms outputs into UI-consumable formats.
-
-### Delivery
-Exposes structured data through backend interfaces.
+![Kinetru Runtime Flow](./assets/runtime-flow.png)
 
 ---
 
-## Runtime Flow
+## Core Responsibilities
 
-1. Signals and outputs received from Kāla  
+### Ingestion
+Receives structured outputs from Kāla and upstream systems.
+
+### Validation
+Ensures data integrity and normalizes incoming inputs.
+
+### Processing
+Applies transformation logic to convert intelligence into usable formats.
+
+### Structuring
+Formats outputs into consistent, UI-consumable schemas.
+
+### Delivery
+Exposes structured data through backend interfaces and APIs.
+
+---
+
+## Execution Flow
+
+1. Input received from Kāla (interpreted intelligence)  
 2. Data is validated and normalized  
-3. Processing logic structures outputs  
-4. Response format is generated  
-5. Data is delivered to product interfaces  
+3. Processing logic transforms outputs  
+4. Output is structured into standard schemas  
+5. Data is delivered through API endpoints  
+6. Product interface consumes structured intelligence  
 
 ---
 
@@ -75,18 +85,18 @@ Kinetru Runtime ONLY:
 ## Relationship with Other Systems
 
 - **Kāla Engine** → provides interpreted and routed intelligence  
-- **Kinetru** → consumes structured outputs for user workflows  
-- **MemMapRu (optional)** → may provide contextual inputs  
+- **Kinetru** → consumes structured outputs for decision workflows  
+- **MemMapRu (optional)** → provides contextual inputs  
 
 ---
 
 ## Architecture Direction
 
-- clear separation between orchestration and delivery  
-- structured API-first design  
+- separation between orchestration and delivery layers  
+- API-first backend design  
 - consistent output schemas  
-- scalable backend services  
-- real-time and batch delivery support  
+- scalable processing pipelines  
+- support for real-time and batch delivery  
 
 ---
 
@@ -96,15 +106,15 @@ This repository documents:
 
 - backend system design  
 - data flow architecture  
-- delivery layer structure  
-- API and response thinking  
+- runtime processing structure  
+- API and response modeling  
 
 ---
 
 ## Current Focus
 
 - defining output schemas for Kinetru  
-- structuring runtime processing pipelines  
+- structuring runtime pipelines  
 - designing API contracts  
 - enabling scalable delivery patterns  
 
